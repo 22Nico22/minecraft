@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 h1 {
@@ -8,7 +8,7 @@ h1 {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 28px;
 }
 
 /*ezt chatgpt-től kérdeztem, hogy hogyan lehet font familyt késziteni*/
@@ -187,7 +187,7 @@ main {
 
 .cycle_img img {
     grid-area: cy_img;
-    max-width: 400px;
+    max-width: 450px;
     width: 100%;
     height: auto;
     padding: 0px;
