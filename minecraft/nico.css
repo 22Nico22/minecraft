@@ -1,45 +1,226 @@
-body {
-background-image: url(kepek/overworld/dirt.png);
+* {
+    box-sizing: border-box;
+    font-size: 12px;
 }
+h1{
+    font-size: 32px;
+}
+h2{
+    font-size: 24px;
+}
+@font-face {
+    font-family: "MyFont";
+    src: url("fonts/MinecraftRegular-Bmg3.otf") format("truetype");
+}
+
+body {
+    background-image: url(kepek/overworld/dirt.png);
+    font-family: "MyFont";
+    padding: 0;
+    margin: 0;
+}
+
+.minecraft_logo {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 20%;
+}
+
 .overworld_nav {
     display: grid;
     grid-area: nav;
-    background-color: rgb(14, 172, 27);
     grid-template-columns: 1fr;
-    margin: 10px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    color: white;
+    box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.678);
 }
-.overworld_nav ul{
-display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr; 
+
+.overworld_nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 3fr;
+    border: 6px solid black;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-right: none;
 }
+
+.overworld_nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+}
+
 .active {
     background-color: rgb(6, 100, 14);
+    padding: 20px;
 }
+
+.non-active {
+    background-color: rgb(14, 172, 27);
+    padding: 20px;
+}
+
+#more {
+    text-align: right;
+}
+
 header {
     grid-area: hd;
+    width: 40%;
+    margin: auto;
+    margin-bottom: 20px;
 }
+
 header img {
     width: 100%;
+    padding: 10px;
 }
+
 footer {
     grid-area: f;
+    background-color: rgb(14, 172, 27);
+    text-align: center;
+    color: white;
 }
+
 article {
     background-image: url(kepek/bright_stone.png);
     grid-area: ar;
-    margin: 10px;
+    margin: 0px 20px 20px 30px;
+    border: 6px solid black;
 }
+
+.text {
+    padding: 20px;
+    text-align: justify;
+}
+
 aside {
     background-image: url(kepek/bright_stone.png);
-    margin: 10px;
+    border: 6px solid black;
+    padding: 10px;
+    margin: 10px 0 10px 10px;
     grid-area: as;
 }
+
+aside h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+aside ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    justify-items: start;
+    padding: 0;
+}
+
+aside li {
+    grid-column: 1 / -1;
+    list-style: none;
+}
+
+aside li:nth-child(5),
+aside li:nth-child(6) {
+    grid-column: span 1;
+}
+
+aside li:nth-child(5) {
+    margin-right: 4%;
+}
+
+aside a {
+    display: block;
+    padding: 6px;
+    background-color: rgba(57, 57, 58, 0.479);
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    color: blue;
+    text-decoration: none;
+    font-size: 15px;
+    text-align: left;
+}
+
 main {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: auto 1fr 1fr;
+    column-gap: 10px;
     grid-template-areas:
-    "hd hd hd" 
-    "as nav nav"
-    "as ar ar"
-    "f f f";
+        "hd hd hd"
+        "as nav nav"
+        "as ar ar"
+        "f f f";
+}
+
+.cycle_img {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "cy_h2 cy_h2"
+        "cy_p cy_img"
+        "cy_p cy_img";
+    column-gap: 5px;
+    row-gap: 10px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.cycle_img h2 {
+    grid-area: cy_h2;
+    margin: 0 0 10px 0;
+}
+
+.cycle_img p {
+    grid-area: cy_p;
+    padding: 0px;
+    margin: 0px;
+}
+
+.cycle_img img {
+    grid-area: cy_img;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+}
+
+#overworld_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.overworld_grid_item {
+    text-align: center;
+}
+
+.overworld_grid_item img {
+    width: 40px;
+    height: auto;
+}
+
+.overworld_grid_item p {
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 600px) {
+    main {
+        display: grid;
+        grid-template-columns: auto 1fr 1fr;
+        column-gap: 10px;
+        grid-template-areas:
+            "hd hd hd"
+            "as nav nav"
+            "as ar ar"
+            "f f f";
+    }
 }
