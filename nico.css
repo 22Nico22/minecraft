@@ -17,7 +17,7 @@ h2 {
     src: url("fonts/MinecraftRegular-Bmg3.otf") format("truetype");
 }
 
-body {
+.overworld {
     background-image: url(kepek/overworld/dirt.png);
     font-family: "MyFont";
     padding: 0;
@@ -71,26 +71,26 @@ body {
     text-align: right;
 }
 
-header {
+.overworld_header {
     grid-area: hd;
     width: 40%;
     margin: auto;
     margin-bottom: 20px;
 }
 
-header img {
+.overworld_header img {
     width: 100%;
     padding: 10px;
 }
 
-footer {
+.overworld_footer {
     grid-area: f;
     background-color: rgb(9, 128, 19);
     text-align: center;
     color: white;
 }
 
-article {
+.overworld_article{
     background-image: url(kepek/bright_stone.png);
     grid-area: ar;
     margin: 0px 20px 20px 30px;
@@ -102,7 +102,7 @@ article {
     text-align: justify;
 }
 
-aside {
+.overworld_aside {
     background-image: url(kepek/bright_stone.png);
     border: 6px solid black;
     padding: 10px;
@@ -110,12 +110,12 @@ aside {
     grid-area: as;
 }
 
-aside h1 {
+.overworld_aside h1 {
     font-size: 32px;
     margin-bottom: 10px;
 }
 
-aside ul {
+.overworld_aside ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
@@ -123,21 +123,21 @@ aside ul {
     padding: 0;
 }
 
-aside li {
+.overworld_aside li {
     grid-column: 1 / -1;
     list-style: none;
 }
 
-aside li:nth-child(5),
-aside li:nth-child(6) {
+.overworld_aside li:nth-child(5),
+.overworld_aside li:nth-child(6) {
     grid-column: span 1;
 }
 
-aside li:nth-child(5) {
+.overworld_aside li:nth-child(5) {
     margin-right: 4%;
 }
 
-aside a {
+.overworld_aside a {
     display: block;
     padding: 6px;
     background-color: rgba(57, 57, 58, 0.479);
@@ -249,21 +249,23 @@ main {
     .cycle_img p {
         max-width: 100%;
     }
-    aside ul {
+    .overworld_aside ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 8px;
         padding: 0;
         margin: 0;
     }
-
-    aside li {
+    .overworld_aside{
+        margin:0px 20px 0px 30px ;
+    }
+    .overworld_aside li {
         grid-column: auto;
         margin: 0;
         list-style: none;
     }
     
-    aside a {
+    .overworld_aside a {
         display: block;
         padding: 6px;
         background-color: rgba(57, 57, 58, 0.479);
