@@ -249,23 +249,23 @@ h2 {
     .cycle_img p {
         max-width: 100%;
     }
-    .overworld_aside ul {
+    #overworld_aside ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 8px;
         padding: 0;
         margin: 0;
     }
-    .overworld_aside{
+    #overworld_aside{
         margin:0px 20px 0px 30px ;
     }
-    .overworld_aside li {
+    #overworld_aside li {
         grid-column: auto;
         margin: 0;
         list-style: none;
     }
     
-    .overworld_aside a {
+    #overworld_aside a {
         display: block;
         padding: 6px;
         background-color: rgba(57, 57, 58, 0.479);
