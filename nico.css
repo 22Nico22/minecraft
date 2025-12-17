@@ -67,7 +67,7 @@ h2 {
     padding: 20px;
 }
 
-.more {
+#more {
     text-align: right;
 }
 
@@ -102,7 +102,7 @@ h2 {
     text-align: justify;
 }
 
-.overworld_aside {
+#overworld_aside {
     background-image: url(kepek/bright_stone.png);
     border: 6px solid black;
     padding: 10px;
@@ -110,12 +110,12 @@ h2 {
     grid-area: as;
 }
 
-.overworld_aside h1 {
+#overworld_aside h1 {
     font-size: 32px;
     margin-bottom: 10px;
 }
 
-.overworld_aside ul {
+#overworld_aside ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
@@ -123,21 +123,21 @@ h2 {
     padding: 0;
 }
 
-.overworld_aside li {
+#overworld_aside li {
     grid-column: 1 / -1;
     list-style: none;
 }
 
-.overworld_aside li:nth-child(5),
-.overworld_aside li:nth-child(6) {
+#overworld_aside li:nth-child(5),
+#overworld_aside li:nth-child(6) {
     grid-column: span 1;
 }
 
-.overworld_aside li:nth-child(5) {
+#overworld_aside li:nth-child(5) {
     margin-right: 4%;
 }
 
-.overworld_aside a {
+#overworld_aside a {
     display: block;
     padding: 6px;
     background-color: rgba(57, 57, 58, 0.479);
@@ -257,7 +257,7 @@ h2 {
         margin: 0;
     }
     #overworld_aside{
-        margin:0px 20px 0px 30px ;
+        margin:0px 20px 0px 30px;
     }
     #overworld_aside li {
         grid-column: auto;
@@ -307,11 +307,13 @@ h2 {
     display: block;
     font-size: 18px;
 }
-.non_active{
+.n-non_active{
     background-color: rgb(255, 51, 0);
+    padding: 20px;
 }
-.active{
+.n_active{
     background-color: rgb(177, 30, 10);
+    padding: 20px;
 }
 #nether_header{
     grid-area: n-hd;
@@ -336,8 +338,45 @@ h2 {
     grid-area: n-as;
     background-image: url(kepek/nether/ht0r6b8590t41.png);
     border: 6px solid black;
-    margin: 0px 20px 20px 30px;
-    border: 6px solid black;
+    padding: 10px;
+    margin: 10px 0 10px 10px;
+}
+#nether_aside h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+#nether_aside ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    justify-items: start;
+    padding: 0;
+}
+
+#nether_aside li {
+    grid-column: 1 / -1;
+    list-style: none;
+}
+
+#nether_aside li:nth-child(5),
+#nether_aside li:nth-child(6) {
+    grid-column: span 1;
+}
+
+#nether_aside li:nth-child(5) {
+    margin-right: 4%;
+}
+
+#nether_aside a {
+    display: block;
+    padding: 6px;
+    background-color: rgba(57, 57, 58, 0.479);
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    color: blue;
+    text-decoration: none;
+    font-size: 15px;
+    text-align: left;
 }
 #nether_footer{
     background-color: rgb(255, 51, 0);
@@ -361,4 +400,35 @@ h2 {
     font-family: "MyFont";
     padding: 0;
     margin: 0;
+}
+#n-cycle_img p {
+    grid-area: n-cy_p;
+    padding: 0px;
+    margin: 0px;
+}
+#n-cycle_img h2 {
+    grid-area: n-cy_h2;
+    margin: 0 0 10px 0;
+}
+#n-cycle_img img {
+    grid-area: n-cy_img;
+    max-width: 450px;
+    width: 60%;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 80px;
+}
+#n-cycle_img{
+    display: grid;
+    grid-template-columns: 3fr;
+    grid-template-areas:
+        "n-cy_h2 n-cy_h2 n-cy_h2"
+        "n-cy_p n-cy_img n-cy_img"
+        "n-cy_p n-cy_img n-cy_img";
+    column-gap: 5px;
+    row-gap: 10px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
